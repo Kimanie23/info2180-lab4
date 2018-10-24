@@ -7,12 +7,11 @@ function wallTop(){
 }
 
 function redWall(){
-	crash = true;
 	var walls = document.querySelectorAll (".boundary");
 	for ( var k=0; k<walls.length; k++)	{
 		walls[k].classList.add("youlose");
 	}
-	 
+	 touch = false;
 }
 
 /*Exercise 2*/
@@ -25,6 +24,20 @@ function allWalls(){
 	}
 }
 
+/*Exercise 3*/
+
+function finishLine() {
+	var finish = document.getElementById("end");
+	end.mouseover = results();
+}
+
+function results(){
+	if (touch == false) {
+		alert("You lose");
+	} else {
+		alert ("You Win!");
+	}	
+}
 
 	
 
