@@ -1,5 +1,5 @@
 /*Exercise 1 */
-window.onload = wallTop; /*top-leftboundary*/
+window.onload = allWalls; /*top-leftboundary*/
 
 function wallTop(){
 	leftWall = document.getElementById("boundary1");
@@ -7,9 +7,24 @@ function wallTop(){
 }
 
 function redWall(){
-	leftWall.classList.add("youlose");
-	
+	crash = true;
+	var walls = document.querySelectorAll (".boundary");
+	for ( var k=0; k<walls.length; k++)	{
+		walls[k].classList.add("youlose");
+	}
+	 
 }
+
+/*Exercise 2*/
+
+	
+function allWalls(){
+	var walls = document.querySelectorAll (".boundary");
+	for (var k=0; k<walls.length; k++)	{
+		walls[k].addEventListener("mouseover", redWall);
+	}
+}
+
 
 	
 
